@@ -7,7 +7,7 @@
     "test": "node example.js",
     "preversion": "npm run deps",
     "postversion": "git push && git push --tags",
-    "deps": "dependency-check package.json && dependency-check package.json --unused --entry test/*.js -i dependency-check -i eslint -i eslint-config-invintus -i tap-spec"
+    "deps": "dependency-check package.json --unused --entry ./example.js -i hyperstream -i marked -i dependency-check -i gray-matter -i eslint -i eslint-config-invintus -i tap-spec"
   },
   "devDependencies": {
     "dependency-check": "^4.1.0",
