@@ -4,9 +4,13 @@
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node example.js"
+    "test": "node example.js",
+    "preversion": "npm run deps",
+    "postversion": "git push && git push --tags",
+    "deps": "dependency-check package.json && dependency-check package.json --unused --entry test/*.js -i dependency-check -i eslint -i eslint-config-invintus -i tap-spec"
   },
   "devDependencies": {
+    "dependency-check": "^4.1.0",
     "gray-matter": "^4.0.2",
     "hyperstream": "^1.2.2"
   },
