@@ -1,6 +1,5 @@
 var fs = require('fs')
 var path = require('path')
-var matter = require('gray-matter')
 var mkdirp = require('mkdirp')
 
 module.exports = {
@@ -10,7 +9,7 @@ module.exports = {
 function buildThem (inputDir, outputDir, templateFile, makeHs) {
     fs.readdir(inputDir, function (err, files) {
         if (err) throw err
-        console.log('files:  ', files)
+        mkdirp.sync(outputDir)
 
         files.forEach(fileName => {
             var _path = path.join(inputDir, fileName)

@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "gray-matter": "^4.0.2",
+    "hyperstream": "^1.2.2"
+  },
+  "dependencies": {
+    "mkdirp": "^1.0.4"
+  }
+}
