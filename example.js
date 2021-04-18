@@ -1,6 +1,7 @@
 var hyperstream = require('hyperstream')
 var matter = require('gray-matter')
 var { buildThem } = require('./')
+var marked = require('marked')
 
 // function buildThem (inputDir, outputDir, templateFile, makeHs) {
 
@@ -17,7 +18,7 @@ function makeHs (file, baseName) {
             class: { append: baseName }
         },
         '#content': {
-            _appendHtml: matter(file).content
+            _appendHtml: marked(matter(file).content)
         }
     })
 }

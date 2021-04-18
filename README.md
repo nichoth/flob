@@ -13,12 +13,14 @@ npm install -S @nichoth/flob
 ```js
 var hyperstream = require('hyperstream')
 var matter = require('gray-matter')
-var { buildThem } = require('@nichoth/flob')
+var { buildThem } = require('./')
+var marked = require('marked')
 
 var inputDir = __dirname + '/src/_pages'
 var outputDir = __dirname + '/public'
 var templateFile = __dirname + '/src/_index.html'
 
+// function buildThem (inputDir, outputDir, templateFile, makeHs) {
 buildThem(inputDir, outputDir, templateFile, makeHs)
 
 // a fn that returns a hs instance
@@ -28,8 +30,9 @@ function makeHs (file, baseName) {
             class: { append: baseName }
         },
         '#content': {
-            _appendHtml: matter(file).content
+            _appendHtml: marked(matter(file).content)
         }
     })
 }
 ```
+
