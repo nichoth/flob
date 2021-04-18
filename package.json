@@ -1,9 +1,26 @@
 {
+  "name": "@nichoth/flob",
+  "description": "Make html files from markdown files",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node example.js"
+  },
   "devDependencies": {
     "gray-matter": "^4.0.2",
     "hyperstream": "^1.2.2"
   },
   "dependencies": {
     "mkdirp": "^1.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/flob.git"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/flob/issues"
+  },
+  "homepage": "https://github.com/nichoth/flob#readme"
 }
