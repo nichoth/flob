@@ -19,7 +19,6 @@ var inputDir = __dirname + '/src/_pages'
 var outputDir = __dirname + '/public'
 var templateFile = __dirname + '/src/_index.html'
 
-// (inputDir, outputDir, templateFile, makeHs) {
 buildThem(inputDir, outputDir, templateFile, makeHs)
 
 // a fn that returns a hs instance
